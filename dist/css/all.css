@@ -9475,6 +9475,10 @@ a.text-hint:hover, a.text-hint:focus {
     padding: 5px;
     background: transparent; }
 
+#category-accordion div,
+#category-accordion-m div {
+  padding-left: 8px; }
+
 #mobile-nav-product-category {
   position: initial !important; }
   #mobile-nav-product-category .nav-link {

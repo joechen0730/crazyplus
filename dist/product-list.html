@@ -227,26 +227,38 @@
       <!-- 管理者視角 -->
       <div class="nav flex-column" id="desktop-nav-product-category">
         <p class="nav-link category-title">商品分類</p>
-        <a class="nav-link category" href="#">全部商品 <span data-userAuthority="member">(1980)</span></a>
-        <a class="nav-link category" href="#">鼠年年菜專區 <span data-userAuthority="member">(7)</span></a>
-        <a class="nav-link category" href="#">TAIWAN - 台灣館 <span data-userAuthority="member">(371)</span></a>
-        <a class="nav-link category-sub" href="#"><span class="category-item">常溫食品</span><span data-userAuthority="member">(179)</span></a>
-        <a class="nav-link category-sub" href="#"><span class="category-item">生活用品</span><span data-userAuthority="member">(116)</span></a>
-        <a class="nav-link category-sub" href="#"><span class="category-item">美妝品</span><span data-userAuthority="member">(21)</span></a>
-        <a class="nav-link category-sub" href="#"><span class="category-item">在地美食</span><span data-userAuthority="member">(35)</span></a>
+        <div class="accordion" id="category-accordion">
+          <a href="#" class="nav-link category" data-toggle="collapse" data-target="#first-category">
+            全部商品 <span data-userAuthority="member">(1980)</span>
+          </a>
+          <div id="first-category" class="collapse show" data-parent="#category-accordion">
+            <a class="nav-link category" href="#" data-toggle="collapse" data-target="#food-second-category">鼠年年菜專區 <span data-userAuthority="member">(7)</span></a>
+            <div id="food-second-category" class="collapse" data-parent="#first-category">
+              <a class="nav-link category-sub" href="#"><span class="category-item">佛跳牆</span><span data-userAuthority="member">(179)</span></a>
+              <a class="nav-link category-sub" href="#"><span class="category-item">獅子頭</span><span data-userAuthority="member">(116)</span></a>
+              <a class="nav-link category-sub" href="#"><span class="category-item">紅燒魚</span><span data-userAuthority="member">(21)</span></a>
+              <a class="nav-link category-sub" href="#"><span class="category-item">五更腸旺</span><span data-userAuthority="member">(35)</span></a> 
+            </div>
+            <a class="nav-link category" href="#" data-toggle="collapse" data-target="#second-category">TAIWAN - 台灣館 <span data-userAuthority="member">(371)</span></a>
+            <div id="second-category" class="collapse" data-parent="#first-category">
+              <a class="nav-link category-sub" href="#" data-toggle="collapse" data-target="#thirty-category-1"><span class="category-item">常溫食品</span><span data-userAuthority="member">(179)</span></a>
+              <div id="thirty-category-1" class="collapse" data-parent="#second-category">
+                <a class="nav-link category-sub" href="#"><span class="category-item">麵包</span><span data-userAuthority="member">(179)</span></a>
+                <a class="nav-link category-sub" href="#"><span class="category-item">飯糰</span><span data-userAuthority="member">(116)</span></a>
+                <a class="nav-link category-sub" href="#"><span class="category-item">茶葉蛋</span><span data-userAuthority="member">(21)</span></a>
+              </div> 
+              <a class="nav-link category-sub" href="#" data-toggle="collapse" data-target="#thirty-category-2"><span class="category-item">生活用品</span><span data-userAuthority="member">(116)</span></a>
+              <div id="thirty-category-2" class="collapse" data-parent="#second-category">
+                <a class="nav-link category-sub" href="#"><span class="category-item">衛生紙</span><span data-userAuthority="member">(179)</span></a>
+                <a class="nav-link category-sub" href="#"><span class="category-item">口罩</span><span data-userAuthority="member">(116)</span></a>
+                <a class="nav-link category-sub" href="#"><span class="category-item">衛生棉</span><span data-userAuthority="member">(21)</span></a>
+              </div> 
+              <a class="nav-link category-sub" href="#" data-toggle="collapse" data-target="#food-second-category"><span class="category-item">美妝品</span><span data-userAuthority="member">(21)</span></a>
+              <a class="nav-link category-sub" href="#" data-toggle="collapse" data-target="#food-second-category"><span class="category-item">在地美食</span><span data-userAuthority="member">(35)</span></a> 
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- 遊客視角 -->
-      <!-- <div class="nav flex-column" id="desktop-nav-product-category">
-        <p class="nav-link category-title">商品分類</p>
-        <a class="nav-link category" href="#">全部商品 </a>
-        <a class="nav-link category" href="#">鼠年年菜專區 </a>
-        <a class="nav-link category" href="#">TAIWAN - 台灣館 </a>
-        <a class="nav-link category-sub" href="#"><span class="category-item">常溫食品</a>
-        <a class="nav-link category-sub" href="#"><span class="category-item">生活用品</a>
-        <a class="nav-link category-sub" href="#"><span class="category-item">美妝品</a>
-        <a class="nav-link category-sub" href="#"><span class="category-item">在地美食</a>
-      </div> -->
-      <!-- 遊客視角 -->
     </div>
     <div class="col-md-8 col-12 product-row">
       <!-- 商品功能 -->
@@ -261,16 +273,41 @@
               <button type="submit" class="navbar-search-btn border-0"><i class="fas fa-search"></i></button>
             </form>
             <div class="btn-group" id="mobile-nav-product-category">
-              <button type="button" class="border-0 dropdown-toggle" data-toggle="dropdown">
+              <button type="button" class="border-0 dropdown-toggle" data-toggle="dropdown" id="category-dropdown-m">
                 分類
               </button>
-              <div class="dropdown-menu">
-                  <a class="nav-link category" href="#"><span class="category-item">鼠年年菜專區</span> <span data-userAuthority="member">(7)</span></a>
-                  <a class="nav-link category" href="#"><span class="category-item">TAIWAN - 台灣館</span> <span data-userAuthority="member">(371)</span></a>
-                  <a class="nav-link category-sub" href="#"><span class="category-item">常溫食品</span><span data-userAuthority="member">(179)</span></a>
-                  <a class="nav-link category-sub" href="#"><span class="category-item">生活用品</span><span data-userAuthority="member">(116)</span></a>
-                  <a class="nav-link category-sub" href="#"><span class="category-item">美妝品</span><span data-userAuthority="member">(21)</span></a>
-                  <a class="nav-link category-sub" href="#"><span class="category-item">在地美食</span><span data-userAuthority="member">(35)</span></a>
+              <div class="dropdown-menu" >
+                <div class="accordion" id="category-accordion-m">
+                  <a href="#" class="nav-link category" data-toggle="collapse" data-target="#first-category">
+                    全部商品 <span data-userAuthority="member">(1980)</span>
+                  </a>
+                  <div id="first-category" class="collapse show" data-parent="#category-accordion-m">
+                    <a class="nav-link category" href="#" data-toggle="collapse" data-target="#food-second-category">鼠年年菜專區 <span data-userAuthority="member">(7)</span></a>
+                    <div id="food-second-category" class="collapse" data-parent="#first-category">
+                      <a class="nav-link category-sub" href="#"><span class="category-item">佛跳牆</span><span data-userAuthority="member">(179)</span></a>
+                      <a class="nav-link category-sub" href="#"><span class="category-item">獅子頭</span><span data-userAuthority="member">(116)</span></a>
+                      <a class="nav-link category-sub" href="#"><span class="category-item">紅燒魚</span><span data-userAuthority="member">(21)</span></a>
+                      <a class="nav-link category-sub" href="#"><span class="category-item">五更腸旺</span><span data-userAuthority="member">(35)</span></a> 
+                    </div>
+                    <a class="nav-link category" href="#" data-toggle="collapse" data-target="#second-category">TAIWAN - 台灣館 <span data-userAuthority="member">(371)</span></a>
+                    <div id="second-category" class="collapse" data-parent="#first-category">
+                      <a class="nav-link category-sub" href="#" data-toggle="collapse" data-target="#thirty-category-1"><span class="category-item">常溫食品</span><span data-userAuthority="member">(179)</span></a>
+                      <div id="thirty-category-1" class="collapse" data-parent="#second-category">
+                        <a class="nav-link category-sub" href="#"><span class="category-item">麵包</span><span data-userAuthority="member">(179)</span></a>
+                        <a class="nav-link category-sub" href="#"><span class="category-item">飯糰</span><span data-userAuthority="member">(116)</span></a>
+                        <a class="nav-link category-sub" href="#"><span class="category-item">茶葉蛋</span><span data-userAuthority="member">(21)</span></a>
+                      </div> 
+                      <a class="nav-link category-sub" href="#" data-toggle="collapse" data-target="#thirty-category-2"><span class="category-item">生活用品</span><span data-userAuthority="member">(116)</span></a>
+                      <div id="thirty-category-2" class="collapse" data-parent="#second-category">
+                        <a class="nav-link category-sub" href="#"><span class="category-item">衛生紙</span><span data-userAuthority="member">(179)</span></a>
+                        <a class="nav-link category-sub" href="#"><span class="category-item">口罩</span><span data-userAuthority="member">(116)</span></a>
+                        <a class="nav-link category-sub" href="#"><span class="category-item">衛生棉</span><span data-userAuthority="member">(21)</span></a>
+                      </div> 
+                      <a class="nav-link category-sub" href="#" data-toggle="collapse" data-target="#food-second-category"><span class="category-item">美妝品</span><span data-userAuthority="member">(21)</span></a>
+                      <a class="nav-link category-sub" href="#" data-toggle="collapse" data-target="#food-second-category"><span class="category-item">在地美食</span><span data-userAuthority="member">(35)</span></a> 
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="btn-group">

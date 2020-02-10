@@ -82,4 +82,7 @@ $(document).ready(function () {
   $('.desktop-filters').on('show.bs.dropdown', function () {
     $('.multiselect-container.dropdown-menu').removeClass('show');
   });
+  $(document).on('click', '#mobile-nav-product-category .dropdown-menu', function (e) {
+    e.stopPropagation();
+  });
 });
