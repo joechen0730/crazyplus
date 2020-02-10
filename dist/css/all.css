@@ -9716,10 +9716,13 @@ a.text-hint:hover, a.text-hint:focus {
 .num-add-btn {
   font-size: 25px;
   background: #f5344b;
-  padding: 0px 6px;
   color: #fff;
   border-radius: 5px;
   cursor: pointer; }
+  .num-minus-btn .fas,
+  .num-add-btn .fas {
+    width: 34px;
+    text-align: center; }
 
 .product-nums {
   width: 60px;
@@ -9744,11 +9747,17 @@ a.text-hint:hover, a.text-hint:focus {
 .close-collapse {
   display: none; }
 
-.describe-collapse-btn.collapsed .close-collapse {
+.describe-collapse-btn .close-collapse {
   display: block; }
 
-.describe-collapse-btn.collapsed .more {
+.describe-collapse-btn .more {
   display: none; }
+
+.describe-collapse-btn.collapsed .close-collapse {
+  display: none; }
+
+.describe-collapse-btn.collapsed .more {
+  display: block; }
 
 @media (max-width: 992px) {
   .desktop-product-infolist,
@@ -9760,6 +9769,11 @@ a.text-hint:hover, a.text-hint:focus {
 @media (min-width: 991px) {
   #product-describe {
     display: none !important; } }
+
+@media (max-width: 576px) {
+  .product-inner-addtocart-btn {
+    margin-left: 0px;
+    margin-top: 10px; } }
 
 /***  
 ================================== 
