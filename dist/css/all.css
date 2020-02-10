@@ -9717,7 +9717,10 @@ a.text-hint:hover, a.text-hint:focus {
   font-size: 25px;
   background: #f5344b;
   color: #fff;
-  border-radius: 5px !important;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   cursor: pointer; }
   .num-minus-btn .fas,
   .num-add-btn .fas {
